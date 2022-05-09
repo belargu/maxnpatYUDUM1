@@ -1,35 +1,32 @@
-# original code taken from Kinematic Character 2D project 
-# from https://github.com/godotengine/godot-demo-projects
-
 extends KinematicBody2D
 
-const WALK_FORCE = 1000
-const WALK_MAX_SPEED = 60
-const STOP_FORCE = 1000
-const JUMP_SPEED = 100
+const UP = Vector2(0, -1) #used in move and slide
+const GRAVITY = 20
+const MAXFALLSPEED = 200
+const MAXSPEED = 150
+const JUMP = 450
+const ACCEL = 20
 
-var velocity = Vector2()
+var motion = Vector2.ZERO
 
-onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+func _ready():
+	pass
 
 func _physics_process(delta):
-	# Horizontal movement code. First, get the player's input.
-	var walk = WALK_FORCE * (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
-	# Slow down the player if they're not trying to move.
-	if abs(walk) < WALK_FORCE * 0.2:
-		# The velocity, slowed down a bit, and then reassigned.
-		velocity.x = move_toward(velocity.x, 0, STOP_FORCE * delta)
+	
+	motion.y += GRAVITY
+	if motion.y > MAXFALLSPEED: #dont wanna fall infinitly fast, terminal velocity
+		motion.y = MAXFALLSPEED
+	
+	motion.x = clamp(motion.x, -MAXSPEED, MAXSPEED) #clamp speed at maximum speed
+	
+	if Input.is_action_pressed("ui_right"): #if press right accellerate right
+		motion.x += ACCEL
+	elif Input.is_action_pressed("ui_left"): #same thing left
+		motion.x -= ACCEL
 	else:
-		velocity.x += walk * delta
-	# Clamp to the maximum horizontal movement speed.
-	velocity.x = clamp(velocity.x, -WALK_MAX_SPEED, WALK_MAX_SPEED)
+		motion.x = lerp(motion.x,0,0.2) ##slowly come to a stop
 
-	# Vertical movement code. Apply gravity.
-	velocity.y += gravity * delta * 2
-
-	# Move based on the velocity and snap to the ground.
-	velocity = move_and_slide_with_snap(velocity, Vector2.DOWN, Vector2.UP)
-
-	# Check for jumping. is_on_floor() must be called after movement code.
-	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
-		velocity.y = -JUMP_SPEED
+	if is_on_floor() and Input.is_action_pressed("ui_up"): #if ur on the floor and u hit up, jump
+		motion.y = -JUMP
+	motion = move_and_slide(motion, UP)

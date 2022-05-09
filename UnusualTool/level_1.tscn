@@ -32,7 +32,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 [node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 39, 136 )
+position = Vector2( 48, 64 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
