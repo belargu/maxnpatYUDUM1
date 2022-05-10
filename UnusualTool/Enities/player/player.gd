@@ -1,10 +1,13 @@
 extends "res://Enities/EntityBase.gd"
 
-export(int) var JUMP = 500 ##height
+export(int) var JUMP = 530 ##height
 const ACCEL = 20
 
 func _ready():
 	pass
+
+func _process(delta):
+	var playerHP = self.hp
 
 func _physics_process(delta):
 	
@@ -19,3 +22,6 @@ func _physics_process(delta):
 
 	if is_on_floor() and Input.is_action_pressed("ui_up"): #if ur on the floor and u hit up, jump
 		velocity.y = -JUMP
+		
+	if Input.is_action_pressed("attack"):
+		pass

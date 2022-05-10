@@ -24,9 +24,13 @@ func move():
 	velocity = move_and_slide(velocity, UP)
 
 func die():
+	print("can i get an f in chat for " + name)
 	queue_free()
 
-func _on_hurtbox_area_entered(hitbox):
+func _on_hurtbox_area_entered(hitbox): #damage is dealt
 	var base_damage = hitbox.damage
 	self.hp -= base_damage
 	print(hitbox.get_parent().name + "'s hitbox touched " + name + "and dealt " + str(base_damage))
+	print("hp is " + str(self.hp))
+	if self.hp <= 0:
+		die()
