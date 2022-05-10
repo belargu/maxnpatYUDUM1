@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="health bar" type="Node2D"]
+
+[node name="heart1" type="Sprite" parent="."]
+
+[node name="heart2" type="Sprite" parent="."]
+
+[node name="heart3" type="Sprite" parent="."]

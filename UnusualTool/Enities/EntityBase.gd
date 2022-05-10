@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export(int) var hp_max: int = 6
-export(int) var hp: int = hp_max
+export(int) var hp: int = hp_max setget set_hp
 export(int) var defense: int = 0
 const UP = Vector2(0, -1) #used in move and slide
 
@@ -13,6 +13,13 @@ export(int) var MAXFALLSPEED = 300
 onready var sprite = $Sprite
 onready var collShape = $CollisionShape2D
 onready var animPlayer = $AnimationPlayer
+
+signal hp_changed(new_hp)
+
+func set_hp(value):
+	if value != hp:
+		hp = clamp(value, 0, hp_max)
+		emit_signal("hp_changed", hp)
 
 func _physics_process(delta):
 	move()
