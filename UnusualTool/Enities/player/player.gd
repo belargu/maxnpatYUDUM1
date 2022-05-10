@@ -20,9 +20,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"): #if press right accellerate right
 		velocity.x += ACCEL
 		dir = 1
+		$Sprite.flip_h = false
 	elif Input.is_action_pressed("ui_left"): #same thing left
 		velocity.x -= ACCEL
 		dir = -1
+		$Sprite.flip_h = true
+		
 	else:
 		velocity.x = lerp(velocity.x,0,0.3) ##slowly come to a stop
 	

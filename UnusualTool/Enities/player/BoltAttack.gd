@@ -18,3 +18,7 @@ func _on_boltAttack_area_entered(area):
 
 func _on_boltAttack_body_entered(body):
 	destroy()
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
