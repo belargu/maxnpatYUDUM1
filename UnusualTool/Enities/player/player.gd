@@ -1,18 +1,12 @@
 extends "res://Enities/EntityBase.gd"
 
-const GRAVITY = 20
-export(int) var MAXFALLSPEED = 250
-export(int) var JUMP = 450 ##height
+export(int) var JUMP = 500 ##height
 const ACCEL = 20
 
 func _ready():
 	pass
 
 func _physics_process(delta):
-	
-	velocity.y += GRAVITY
-	if velocity.y > MAXFALLSPEED: #dont wanna fall infinitly fast, terminal velocity
-		velocity.y = MAXFALLSPEED
 	
 	velocity.x = clamp(velocity.x, -SPEED, SPEED) #clamp speed at maximum speed
 	
