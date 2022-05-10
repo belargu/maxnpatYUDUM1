@@ -3,7 +3,7 @@ extends KinematicBody2D
 const UP = Vector2(0, -1) #used in move and slide
 const GRAVITY = 20
 export(int) var MAXFALLSPEED = 250
-const MAXSPEED = 150
+const SPEED = 150 #max speed
 export(int) var JUMP = 450 ##height
 const ACCEL = 20
 
@@ -18,7 +18,7 @@ func _physics_process(delta):
 	if velocity.y > MAXFALLSPEED: #dont wanna fall infinitly fast, terminal velocity
 		velocity.y = MAXFALLSPEED
 	
-	velocity.x = clamp(velocity.x, -MAXSPEED, MAXSPEED) #clamp speed at maximum speed
+	velocity.x = clamp(velocity.x, -SPEED, SPEED) #clamp speed at maximum speed
 	
 	if Input.is_action_pressed("ui_right"): #if press right accellerate right
 		velocity.x += ACCEL
