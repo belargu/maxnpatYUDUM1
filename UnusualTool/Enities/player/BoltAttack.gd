@@ -7,8 +7,13 @@ func _ready():
 	#global_position.y = 50
 	pass
 	
-func _physics_process(delta): #make the bolt move in a direction, post right, neg left
+func _physics_process(delta): #make the bolt move in a direction, pos right, neg left
 	global_position.x += SPEED * delta * dir
+	
+	if dir > 0:
+		$Sprite.flip_h = false
+	elif dir < 0:
+		$Sprite.flip_h = true
 	
 func destroy():
 	queue_free()
