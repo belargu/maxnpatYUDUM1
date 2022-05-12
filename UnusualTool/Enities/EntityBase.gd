@@ -13,6 +13,7 @@ export(int) var MAXFALLSPEED = 300
 onready var sprite = $Sprite
 onready var collShape = $CollisionShape2D
 onready var animPlayer = $AnimationPlayer
+onready var timer = $fx_timer
 
 signal hp_changed(new_hp)
 
@@ -37,7 +38,13 @@ func die():
 func _on_hurtbox_area_entered(hitbox): #damage is dealt
 	var base_damage = hitbox.damage
 	self.hp -= base_damage
+	sprite.modulate = Color (1,0,0,1)
+	timer.start(0.2)
 	print(hitbox.get_parent().name + "'s hitbox touched " + name + "and dealt " + str(base_damage))
 	print("hp is " + str(self.hp))
 	if self.hp <= 0:
 		die()
+
+
+func _on_fx_timer_timeout():
+	sprite.modulate = Color (1,1,1,1)

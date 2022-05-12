@@ -9,6 +9,9 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
+[node name="fx_timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -17,6 +20,7 @@ script = ExtResource( 1 )
 
 [node name="hitbox" parent="." instance=ExtResource( 3 )]
 
+[connection signal="timeout" from="fx_timer" to="." method="_on_fx_timer_timeout"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="hurtbox"]

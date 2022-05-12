@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rats.mp3-4c7be6bef28bf8af08710a17f27169aa.mp3str"
+
+[deps]
+
+source_file="res://sounds/rats.mp3"
+dest_files=[ "res://.import/rats.mp3-4c7be6bef28bf8af08710a17f27169aa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
