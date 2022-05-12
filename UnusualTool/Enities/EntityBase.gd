@@ -9,6 +9,7 @@ export(int) var SPEED: int = 150 #max speed
 var velocity = Vector2.ZERO
 const GRAVITY = 25
 export(int) var MAXFALLSPEED = 300
+export var dir = 1
 
 onready var sprite = $Sprite
 onready var collShape = $CollisionShape2D
@@ -30,6 +31,10 @@ func move():
 	if velocity.y > MAXFALLSPEED: #dont wanna fall infinitly fast, terminal velocity
 		velocity.y = MAXFALLSPEED
 	velocity = move_and_slide(velocity, UP)
+	if dir == 1:
+		$Sprite.flip_h = false
+	else:
+		$Sprite.flip_h = true
 
 func die():
 	print("can i get an f in chat for " + name)

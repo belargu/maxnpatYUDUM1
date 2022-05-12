@@ -2,7 +2,6 @@ extends "res://Enities/EntityBase.gd"
 
 export(int) var JUMP = 530 ##height
 const ACCEL = 20
-var dir = 1
 
 onready var _animation_player = $AnimationPlayer
 
@@ -22,12 +21,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"): #if press right accellerate right
 		velocity.x += ACCEL
 		dir = 1
-		$Sprite.flip_h = false
+		#$Sprite.flip_h = false
 		_animation_player.play("walk")
 	elif Input.is_action_pressed("ui_left"): #same thing left
 		velocity.x -= ACCEL
 		dir = -1
-		$Sprite.flip_h = true
+		#$Sprite.flip_h = true
 		_animation_player.play("walk")
 		
 		
@@ -51,3 +50,8 @@ func _physics_process(delta):
 		velocity.y = -JUMP
 	elif not is_on_floor():
 		_animation_player.play("jump")
+
+
+
+func _on_hitbox_area_entered(area):
+	velocity.y = -JUMP*.8

@@ -91,27 +91,31 @@ hframes = 4
 vframes = 4
 frame = 8
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" parent="." index="2"]
+[node name="AnimationPlayer" parent="." index="3"]
 anims/idle = SubResource( 14 )
 anims/jump = SubResource( 15 )
 anims/shoot = SubResource( 16 )
 anims/walk = SubResource( 17 )
 
-[node name="hurtbox" parent="." index="3"]
+[node name="hurtbox" parent="." index="4"]
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="hurtbox" index="0"]
 shape = SubResource( 2 )
 
-[node name="hitbox" parent="." index="4"]
+[node name="hitbox" parent="." index="5"]
+collision_layer = 2
 collision_mask = 8
+monitoring = true
 
 [node name="CollisionShape2D" parent="hitbox" index="0"]
 position = Vector2( 0, 14.75 )
 shape = SubResource( 3 )
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
 
 [editable path="hurtbox"]
 [editable path="hitbox"]
