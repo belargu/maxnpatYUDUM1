@@ -16,3 +16,4 @@ position = Vector2( 136, 240 )
 
 [node name="rat2" parent="." index="8" instance=ExtResource( 2 )]
 position = Vector2( 232, 64 )
+edge_detect = true

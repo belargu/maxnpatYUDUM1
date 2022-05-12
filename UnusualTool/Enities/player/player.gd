@@ -39,8 +39,7 @@ func _physics_process(delta):
 		var boltAttack = BoltAttack.instance() #load instance into var ?
 		var world = get_tree().current_scene #get world tree thing ??
 		world.add_child(boltAttack) #make new instnace of bolt a child of the world
-		boltAttack.global_position = global_position #put the bolt where the player is
-		boltAttack.global_position.y -= 9 #offset so it comes out of players head
+		boltAttack.global_position = global_position + Vector2(0, -9) #put the bolt where the player is accounting for offset
 		boltAttack.dir = sign(dir) #determine the direction of the projectile based off of the players last input
 		
 	if Input.is_action_pressed("attack"):
