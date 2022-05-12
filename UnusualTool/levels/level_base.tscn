@@ -990,7 +990,7 @@ extents = Vector2( 8, 320 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 160, 120 )
-scale = Vector2( 1.25, 1.07143 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 
 [node name="walls TileMap" type="TileMap" parent="."]
