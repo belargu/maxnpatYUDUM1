@@ -56,3 +56,6 @@ func _on_hitbox_area_entered(area):
 func _on_door_body_entered(body: Node) -> void:
 	get_parent().doorEntered = true #bool used in level_1-3.gd
 	
+func die():
+	get_tree().reload_current_scene() #reload the scene if player dies (resets health, and respawns enemys)
+	
