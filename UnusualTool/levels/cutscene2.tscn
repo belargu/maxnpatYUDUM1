@@ -198,13 +198,10 @@ script = ExtResource( 1 )
 anims/cutscene2 = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 110, 270 )
-scale = Vector2( 2, 2 )
+position = Vector2( 192, 144 )
 texture = ExtResource( 5 )
 
 [node name="wth" type="RichTextLabel" parent="."]
-visible = false
 margin_left = 144.0
 margin_top = 264.0
 margin_right = 248.0
@@ -281,11 +278,13 @@ __meta__ = {
 }
 
 [node name="Sprite5" type="Sprite" parent="."]
+visible = false
 position = Vector2( 192, 144 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
 [node name="joke" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 120.0
 margin_top = 248.0
 margin_right = 264.0

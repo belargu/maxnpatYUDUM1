@@ -54,12 +54,5 @@ func _on_hitbox_area_entered(area):
 	velocity.y = -JUMP*.8
 
 func _on_door_body_entered(body: Node) -> void:
-	Global.levelNum += 1 #next level
-	Global.goto_scene("res://levels/level_"+str(Global.levelNum)+".tscn")
+	get_parent().doorEntered = true #bool used in level_1-3.gd
 	
-# CURRENT PROBLEM: i didn't connect level_2.tscn's door's instance's signal to
-# this command because it'll call goto_scene() for more than 1 frame (i assume)
-# so the project just zooms through several scenes. idk if i'm explaining this
-# right it's past my bedtime im sorry 
-# a solution would be to make multiple functions, each going to specific levels
-# but that would be spaghetti...
