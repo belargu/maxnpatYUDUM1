@@ -10,13 +10,25 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 232.0
-margin_top = 16.0
-margin_right = 368.0
-margin_bottom = 104.0
+margin_left = 8.0
+margin_top = 176.0
+margin_right = 256.0
+margin_bottom = 280.0
 bbcode_enabled = true
-bbcode_text = "[color=red]the end"
-text = "the end"
+bbcode_text = "[color=yellow]the end
+
+CREDITS
+art by patty
+code by max
+
+made for YUdum dare 1: unusual tools"
+text = "the end
+
+CREDITS
+art by patty
+code by max
+
+made for YUdum dare 1: unusual tools"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

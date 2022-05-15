@@ -20,6 +20,8 @@ wait_time = 0.5
 
 [node name="hitbox" parent="." instance=ExtResource( 3 )]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="timeout" from="fx_timer" to="." method="_on_fx_timer_timeout"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 

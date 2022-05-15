@@ -1,6 +1,7 @@
 extends "res://Enities/enemy/EnemyBase.gd"
 
 onready var fcast = $floor_cast
+onready var audioPlayer = $AudioStreamPlayer
 export var edge_detect = true
 
 func _ready():

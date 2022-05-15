@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wrenchhurt.mp3-f17c0a007c3fae162058b4f3092a03dd.mp3str"
+
+[deps]
+
+source_file="res://sounds/wrench/wrenchhurt.mp3"
+dest_files=[ "res://.import/wrenchhurt.mp3-f17c0a007c3fae162058b4f3092a03dd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

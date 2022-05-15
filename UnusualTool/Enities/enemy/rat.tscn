@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Enities/enemy/EnemyBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://imgs/sprites/rat.png" type="Texture" id=2]
 [ext_resource path="res://Enities/enemy/rat.gd" type="Script" id=3]
+[ext_resource path="res://sounds/rats.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 12 )
@@ -47,6 +48,9 @@ shape = SubResource( 3 )
 [node name="floor_cast" type="RayCast2D" parent="." index="6"]
 enabled = true
 cast_to = Vector2( 0, 20 )
+
+[node name="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource( 4 )
 
 [editable path="hurtbox"]
 [editable path="hitbox"]

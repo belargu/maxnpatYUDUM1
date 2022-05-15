@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/persontalking.mp3-a5edaf2a3289e40f385606a81b833b5f.mp3str"
+
+[deps]
+
+source_file="res://sounds/persontalking.mp3"
+dest_files=[ "res://.import/persontalking.mp3-a5edaf2a3289e40f385606a81b833b5f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

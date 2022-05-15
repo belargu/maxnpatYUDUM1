@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ratwalk.mp3-7b8fc68480d8748f543059dade11508e.mp3str"
+
+[deps]
+
+source_file="res://sounds/rat/ratwalk.mp3"
+dest_files=[ "res://.import/ratwalk.mp3-7b8fc68480d8748f543059dade11508e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -38,4 +38,7 @@ position = Vector2( 264, 96 )
 [node name="rat7" parent="." index="12" instance=ExtResource( 4 )]
 position = Vector2( 216, 96 )
 
+[node name="player" parent="." index="13"]
+position = Vector2( 24, 240 )
+
 [connection signal="body_entered" from="door" to="player" method="_on_door_body_entered"]

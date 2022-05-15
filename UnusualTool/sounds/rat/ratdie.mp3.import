@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ratdie.mp3-486e69899bcfbafc99befc2d0d5a71b0.mp3str"
+
+[deps]
+
+source_file="res://sounds/rat/ratdie.mp3"
+dest_files=[ "res://.import/ratdie.mp3-486e69899bcfbafc99befc2d0d5a71b0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

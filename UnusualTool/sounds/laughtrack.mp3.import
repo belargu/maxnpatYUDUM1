@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laughtrack.mp3-519dc6f7e30eef176b1f3ccc1b864970.mp3str"
+
+[deps]
+
+source_file="res://sounds/laughtrack.mp3"
+dest_files=[ "res://.import/laughtrack.mp3-519dc6f7e30eef176b1f3ccc1b864970.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

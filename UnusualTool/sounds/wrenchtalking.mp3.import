@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wrenchtalking.mp3-d82bcc326db33facdfe0944a7941b085.mp3str"
+
+[deps]
+
+source_file="res://sounds/wrenchtalking.mp3"
+dest_files=[ "res://.import/wrenchtalking.mp3-d82bcc326db33facdfe0944a7941b085.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

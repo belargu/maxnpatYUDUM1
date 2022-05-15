@@ -4,6 +4,7 @@ export(int) var JUMP = 530 ##height
 const ACCEL = 20
 
 onready var _animation_player = $AnimationPlayer
+onready var audioPlayer = $AudioStreamPlayer
 
 #signal attacking(dir)
 
@@ -44,18 +45,32 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("attack"):
 		_animation_player.play("shoot")
+		audioPlayer.stream = load("res://sounds/wrench/wrenchshoot.mp3")
+		audioPlayer.play(0)
 		
 	if is_on_floor() and Input.is_action_pressed("ui_up"): #if ur on the floor and u hit up, jump
 		velocity.y = -JUMP
 	elif not is_on_floor():
 		_animation_player.play("jump")
-
+		
+	if Input.is_action_just_pressed("ui_up"):
+		#extra block of code here to play wrenchjump.mp3 bc it's looped
+		#weirdly when played in AnimationPlayer
+		audioPlayer.stream = load("res://sounds/wrench/wrenchjump.mp3")
+		audioPlayer.play(0)
+		
 func _on_hitbox_area_entered(area):
 	velocity.y = -JUMP*.8
+	audioPlayer.stream = load("res://sounds/wrench/wrenchjump.mp3")
+	audioPlayer.play(0)
 
 func _on_door_body_entered(body: Node) -> void:
 	get_parent().doorEntered = true #bool used in level_1-3.gd
 	
 func die():
-	get_tree().reload_current_scene() #reload the scene if player dies (resets health, and respawns enemys)
+	get_parent().toRespawn = true
+	#can't use the function below since we're using global.gd for level switching;
+	#"can't free a deleted scene" error shows up when player tries to switch levels
+	#after respawning at least once
+	#get_tree().reload_current_scene()
 	
