@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://imgs/bg3.png" type="Texture" id=1]
+[ext_resource path="res://imgs/bg/bg3.png" type="Texture" id=1]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,10 +15,8 @@ margin_top = 16.0
 margin_right = 368.0
 margin_bottom = 104.0
 bbcode_enabled = true
-bbcode_text = "[color=red]the end
-this is a placeholder"
-text = "the end
-this is a placeholder"
+bbcode_text = "[color=red]the end"
+text = "the end"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

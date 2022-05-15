@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://imgs/wrench_start.png" type="Texture" id=1]
-[ext_resource path="res://imgs/title.png" type="Texture" id=2]
-[ext_resource path="res://imgs/flamesheet.png" type="Texture" id=3]
+[ext_resource path="res://imgs/bg/wrench_start.png" type="Texture" id=1]
+[ext_resource path="res://imgs/bg/title.png" type="Texture" id=2]
+[ext_resource path="res://imgs/sprites/flamesheet.png" type="Texture" id=3]
 [ext_resource path="res://levels/start.gd" type="Script" id=4]
-[ext_resource path="res://imgs/bg5.png" type="Texture" id=5]
+[ext_resource path="res://imgs/bg/bg5.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -75,6 +75,7 @@ position = Vector2( 192, 144 )
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 6 )
 animation = "wiggle"
+frame = 1
 playing = true
 
 [node name="wrench" type="Sprite" parent="."]
@@ -103,9 +104,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 4.5
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

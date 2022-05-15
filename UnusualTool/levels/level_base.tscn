@@ -1,10 +1,10 @@
 [gd_scene load_steps=109 format=2]
 
-[ext_resource path="res://imgs/bg1.png" type="Texture" id=1]
-[ext_resource path="res://imgs/wallsheet.png" type="Texture" id=2]
-[ext_resource path="res://imgs/bolt1.png" type="Texture" id=3]
-[ext_resource path="res://imgs/bolt2.png" type="Texture" id=4]
-[ext_resource path="res://imgs/tile.png" type="Texture" id=5]
+[ext_resource path="res://imgs/bg/bg1.png" type="Texture" id=1]
+[ext_resource path="res://imgs/sprites/wallsheet.png" type="Texture" id=2]
+[ext_resource path="res://imgs/sprites/bolt1.png" type="Texture" id=3]
+[ext_resource path="res://imgs/sprites/bolt2.png" type="Texture" id=4]
+[ext_resource path="res://imgs/sprites/tile.png" type="Texture" id=5]
 [ext_resource path="res://levels/door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enities/player/player.tscn" type="PackedScene" id=7]
 
