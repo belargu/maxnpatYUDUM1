@@ -89,7 +89,6 @@ position = Vector2( 192, 144 )
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 6 )
 animation = "wiggle"
-frame = 4
 playing = true
 
 [node name="wrench" type="Sprite" parent="."]
