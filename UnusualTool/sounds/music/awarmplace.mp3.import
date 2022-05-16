@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/awarmplace.mp3-3013d61ae9c2843c788ea2fed99030c7.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/awarmplace.mp3"
+dest_files=[ "res://.import/awarmplace.mp3-3013d61ae9c2843c788ea2fed99030c7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

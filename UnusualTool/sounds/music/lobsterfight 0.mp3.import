@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lobsterfight 0.mp3-6c75de5ea048aa05166ad9b4cb3a78fc.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/lobsterfight 0.mp3"
+dest_files=[ "res://.import/lobsterfight 0.mp3-6c75de5ea048aa05166ad9b4cb3a78fc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

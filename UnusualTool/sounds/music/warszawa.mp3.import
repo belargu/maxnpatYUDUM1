@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/warszawa.mp3-b3532ec9edf858df1b63f6b0aceae333.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/warszawa.mp3"
+dest_files=[ "res://.import/warszawa.mp3-b3532ec9edf858df1b63f6b0aceae333.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
