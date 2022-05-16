@@ -61,16 +61,23 @@ func _physics_process(delta):
 		
 func _on_hitbox_area_entered(area):
 	velocity.y = -JUMP*.8
-	audioPlayer.stream = load("res://sounds/wrench/wrenchjump.mp3")
+	
+#when player is hurt, play noise
+func _on_hurtbox_area_entered_2(area: Area2D) -> void:
+	audioPlayer.stream = load("res://sounds/wrench/wrenchhurt.mp3")
 	audioPlayer.play(0)
 
+#switch level
 func _on_door_body_entered(body: Node) -> void:
 	get_parent().doorEntered = true #bool used in level_1-3.gd
 	
 func die():
+	Global.respawned = true
 	get_parent().toRespawn = true
+	
 	#can't use the function below since we're using global.gd for level switching;
 	#"can't free a deleted scene" error shows up when player tries to switch levels
 	#after respawning at least once
 	#get_tree().reload_current_scene()
-	
+
+

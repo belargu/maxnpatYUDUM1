@@ -4,9 +4,8 @@
 extends Node
 
 var current_scene = null
-
-var levelNum = 1
-var prevLevelNum = levelNum  
+var respawned = false  
+var timestamp = 0.0
 
 func _ready():
 	var root = get_tree().get_root()
@@ -26,6 +25,9 @@ func goto_scene(path):
 	call_deferred("_deferred_goto_scene", path)
 
 func _deferred_goto_scene(path):
+	#get exact timestamp of music playing to continue in new scene
+	timestamp = current_scene.get_node("music").get_playback_position()
+	
 	# It is now safe to remove the current scene
 	current_scene.free()
 
@@ -40,3 +42,4 @@ func _deferred_goto_scene(path):
 
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	get_tree().set_current_scene(current_scene)
+	
