@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sanctified.mp3-be5735dd9e1f1d44a7e8605b51377e3a.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/sanctified.mp3"
+dest_files=[ "res://.import/sanctified.mp3-be5735dd9e1f1d44a7e8605b51377e3a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

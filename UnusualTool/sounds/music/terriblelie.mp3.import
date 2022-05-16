@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/terriblelie.mp3-48a5a56c94a14283f6f9bd33836a5311.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/terriblelie.mp3"
+dest_files=[ "res://.import/terriblelie.mp3-48a5a56c94a14283f6f9bd33836a5311.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
